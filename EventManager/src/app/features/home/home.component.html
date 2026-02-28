@@ -1,0 +1,29 @@
+<div id="mainContainer">
+
+  <div id="welcome">
+    <h1>Bienvenue !</h1>
+    <div>
+      <p>Tu cherche à échanger avec des développeurs et développeuses ?</p>
+      <p>Tu es à la recherche d'un emploi dans le développement Web en Belgique ?</p>
+      <p>Tu recherche une conférence ou une formation autour d'un sujet particulier ?</p>
+      <p>Tu recherche un Hackaton ou un nouveau challenge ?</p>
+    </div>
+  </div>
+  <div id="cardContainer">
+    <p-card header="Les événements">
+      <p>Découvrez tout les évènements qui auront lieu prochainement et inscrivez-vous !</p>
+
+      <ng-template pTemplate="footer">
+        <p-button [routerLink]="['/events']">Voir tout les évènements</p-button>
+      </ng-template>
+    </p-card>
+
+    <p-card header="Gestion des événements">
+      <p>Vous souhaitez créer un évènements, gérer vos évènements et vos participation</p>
+
+      <ng-template pTemplate="footer">
+        <p-button [routerLink]="['/userEvents']">Gérer mes évènements</p-button>
+      </ng-template>
+    </p-card>
+  </div>
+</div>

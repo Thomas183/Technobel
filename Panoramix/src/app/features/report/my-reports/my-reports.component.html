@@ -1,0 +1,55 @@
+<h3>Liste de mes rapports</h3>
+
+<h4>Rapports non achevés</h4>
+
+<p-table class="tables" autoLayout="true" [scrollable]="false" [value]="listReportsUnfinish" responsiveLayout="true"
+         [breakpoint]="'25%'">
+    <ng-template class="tableHeaderz" pTemplate="header">
+        <tr style="min-width: 100%">
+            <th>Nom du rapport</th>
+            <th>Description</th>
+            <th>Date de création</th>
+            <th>Modifier</th>
+        </tr>
+    </ng-template>
+    <ng-template class="tableBody" pTemplate="body" let-report>
+        <tr>
+            <td>{{ report.name }}</td>
+            <td>{{ report.description }}</td>
+            <td>{{ report.log.createdAt | date }}</td>
+            <td>
+                <p-button label="Modifier" (click)="quoicoubeh(report.id)"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<h3>Rapports Publiés : </h3>
+
+<p-table class="tables" autoLayout="true" [value]="listReportsFinish">
+    <ng-template class="tableHeaderz" pTemplate="header">
+        <tr>
+            <th>Nom du rapport</th>
+            <th>Description</th>
+            <th>Date de création</th>
+            <th>Modifier</th>
+        </tr>
+    </ng-template>
+    <ng-template class="tableBody" pTemplate="body" let-report>
+        <tr>
+            <td>{{ report.name }}</td>
+            <td>
+                <div class="column-content">{{ report.description }}</div>
+            </td>
+            <td>{{ report.log.createdAt | date }}</td>
+            <td>
+                <p-button label="Modifier" (onClick)="quoicoubeh(report.id)"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td class="text-center" colspan="4">Rien à afficher</td>
+        </tr>
+    </ng-template>
+</p-table>

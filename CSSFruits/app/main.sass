@@ -1,0 +1,35 @@
+@import "./variables"
+
+html
+  scrollbar-face-color: $secondary-color
+  scrollbar-base-color: $secondary-color
+  scrollbar-3dlight-color: $secondary-color
+  scrollbar-highlight-color: $secondary-color
+
+
+
+::-webkit-scrollbar
+  width: 8px
+  height: 3px
+::-webkit-scrollbar-button
+  background-color: $primary-color
+::-webkit-scrollbar-track
+  background-color: $primary-color
+::-webkit-scrollbar-track-piece
+  background-color: $primary-color
+::-webkit-scrollbar-thumb
+  background-color: $secondary-color
+
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  background: $primary-color
+  color: $accent
+  margin: 0
+  padding: 0
+  font-family: Arial, sans-serif
+
+main
+  width: 100%

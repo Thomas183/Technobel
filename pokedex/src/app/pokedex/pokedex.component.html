@@ -1,0 +1,24 @@
+<div class="mainContainer">
+  <div class="pokemonContainer">
+    <div>
+      <p id="pokemonName">{{pokemonDetails?.name || 'Nom du Pokemon' | uppercase}}</p>
+      <div class="imageContainer">
+        <img [src]="pokemonDetails?.sprites?.front_default" alt="">
+        <img [src]="pokemonDetails?.sprites?.back_default" alt="">
+      </div>
+      <p id="description">{{pokemonDetails?.description | pokemonDescription}}</p>
+      <div class="details">
+        <p>N°{{pokemonDetails?.id || 'x'}}</p>
+        <p>Poids : {{pokemonDetails?.weight || 'x'}} kg</p>
+        <p>Taille : {{pokemonDetails?.height || 'x'}} cm</p>
+      </div>
+    </div>
+  </div>
+  <div class="listContainer">
+    <button (click)="getNewList(false)">↑</button>
+    <ul *ngFor="let pokemon of pokemonList">
+      <li (click)="getDetails(pokemon.url)">{{pokemon.name | titlecase}}</li>
+    </ul>
+    <button (click)="getNewList(true)">↓</button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="activity" id="activityDetailMainContainer">
+  <p-card header="{{activity.name}}">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+    </ng-template>
+    <p *ngIf="activity.description">Description : {{activity.description}}</p>
+    <p *ngIf="!activity.description">Aucune Description</p>
+    <p>Date de début : {{activity.startDate | date : "dd MMM 'à' hh'h'mm"}}</p>
+    <p>Date de fin : {{activity.endDate | date : "dd MMM 'à' hh'h'mm"}}</p>
+    <p>Participants max : {{activity.maxGuest ? activity.maxGuest : 'Non'}}</p>
+    <div id="buttonContainer">
+      <p-button [routerLink]="['/events']">Retour</p-button>
+      <p-button [disabled]="!isCreator" [routerLink]="['/editEvent/'+activity.id]">Modifier</p-button>
+    </div>
+  </p-card>
+</div>
+
+<div *ngIf="!activity">
+  <p> Erreur : Activité introuvable</p>
+  <p-button [routerLink]="['/incomingEvents']">Retour</p-button>
+</div>

@@ -1,0 +1,19 @@
+<h1 class="text-center">Explorer les tables</h1>
+<p-table [paginator]="true" [rows]="30" [value]="tables" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nom de la table</th>
+            <th>Actions</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-tables>
+        <tr>
+            <td>{{ tables.name }}</td>
+            <td>
+                <p-button class="p-1" icon="pi pi-eye"></p-button>
+                <p-button class="p-1" icon="pi pi-times"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+

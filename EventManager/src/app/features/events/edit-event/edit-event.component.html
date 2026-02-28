@@ -1,0 +1,41 @@
+<form [formGroup]="editEventForm">
+
+  <h1>Modifier événement</h1>
+
+
+  <div class="p-inputgroup">
+    <input pInputText formControlName="name" type="text" placeholder="Nom de l'événement">
+  </div>
+
+  <div class="p-inputgroup">
+    <input pInputTextarea id="description" formControlName="description" type="text" placeholder="Description">
+
+  </div>
+
+
+  <div class="p-inputgroup">
+    <p-calendar (onClose)="dateSelected=true" [ngModelOptions]="{standalone: true}" [(ngModel)]="dateRange"
+                selectionMode="range" [showTime]="true" [readonlyInput]="true" [showIcon]="true" [minDate]="date"
+                placeholder="Début - Fin" [inline]="true">
+
+    </p-calendar>
+  </div>
+  <span *ngIf="dateRange.length === 0 && dateSelected">Champ requis</span>
+
+  <div class="p-inputgroup">
+    <input pInputText formControlName="maxGuest" type="number" placeholder="Participants max">
+  </div>
+
+  <div id="checkbox">
+    <label for="cancelEvent">Annuler l'événement</label>
+    <p-checkbox [ngModelOptions]="{standalone: true}" [(ngModel)]="isCancelChecked" [binary]="true" id="cancelEvent"></p-checkbox>
+  </div>
+
+  <div id="buttonContainer">
+
+
+    <p-button (click)="modifyEvent()">Confirmer</p-button>
+  </div>
+
+</form>
+

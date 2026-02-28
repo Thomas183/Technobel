@@ -1,0 +1,51 @@
+<div class="layout-topbar">
+
+    <a href="" class="layout-topbar-logo">
+        <img id="layout-topbar-logo" src="assets/layout/images/logo-white.png" alt="babylon-layout"/>
+    </a>
+
+    <a class="layout-menu-button" href="" (click)="appMain.onMenuButtonClick($event)">
+        <i class="pi pi-bars"></i>
+    </a>
+
+    <a id="topbar-menu-button" href="" (click)="appMain.onTopbarMenuButtonClick($event)">
+        <i class="pi pi-ellipsis-v"></i>
+    </a>
+
+    <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-visible': appMain.topbarMenuActive}">
+        <li #profile class="user-profile" *ngIf="app.profileMode==='popup'||appMain.isHorizontal()"
+            [ngClass]="{'active-topmenuitem':appMain.activeTopbarItem === profile}">
+
+            <a href="" (click)="appMain.onTopbarItemClick($event,profile)">
+                <i class="pi pi-user" style="color: white;"></i>
+                <span class="topbar-item-name">Arlene Welch</span>
+            </a>
+
+            <ul class="fadeInDown">
+                <li role="dashboard">
+                    <a [routerLink]="['/auth/changePassword']" (click)="appMain.onTopbarSubItemClick($event)">
+                        <i class="pi pi-user "></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a routerLink="settings" (click)="appMain.onTopbarSubItemClick($event)">
+                        <i class="pi pi-cog"></i>
+                        <span>Paramètres</span>
+                    </a>
+                </li>
+
+                <!-- Bouton déconnexion !-->
+                <li role="menuitem">
+                    <a (click)="disconnect()">
+                        <!-- <a routerLink="login" (click)="disconnect()"> -->
+                        <i class="pi pi-sign-out"></i>
+                        <span>Se déconnecter</span>
+                    </a>
+                </li>
+                <!-- Bouton déconnexion !-->
+
+            </ul>
+        </li>
+    </ul>
+</div>

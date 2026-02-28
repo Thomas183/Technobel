@@ -1,0 +1,50 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: silver;
+  width: 100%;
+  padding: 5px;
+  height: 100%;
+}
+
+#pokemonName {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+}
+
+.pokemonContainer {
+  width: 500px;
+}
+
+.imageContainer {
+  height: 200px;
+  display: flex;
+}
+.imageContainer img {
+  flex-grow: 1;
+}
+
+.details {
+  border: solid;
+}
+
+.listContainer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.listContainer ul, .listContainer li {
+  margin: 2px;
+  list-style: none;
+  font-weight: bold;
+  padding: 2px;
+}
+.listContainer li {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=pokedex.component.css.map */

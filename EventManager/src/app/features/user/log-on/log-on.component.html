@@ -1,0 +1,22 @@
+<h1>Connexion</h1>
+<form [formGroup]="loginForm">
+  <div class='p-inputgroup'>
+  <span class='p-inputgroup-addon'>
+    <i class='pi pi-user'></i>
+  </span>
+    <input pInputText formControlName="identifier" placeholder='Pseudo / Mail'>
+  </div>
+
+  <div class='p-inputgroup'>
+  <span class='p-inputgroup-addon'>
+    <i class='pi pi-lock'></i>
+  </span>
+    <input pInputText formControlName="password" placeholder='Mot de passe' type='password'>
+  </div>
+
+  <div id="buttonContainer">
+    <p-button label='Pas de compte ?' (click)="this._router.navigate(['register'])"></p-button>
+    <p-button label='Connexion' (click)='login()'></p-button>
+  </div>
+</form>
+

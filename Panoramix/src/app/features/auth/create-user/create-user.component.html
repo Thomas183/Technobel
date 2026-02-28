@@ -1,0 +1,64 @@
+<div class="w-full h-full flex align-items-center justify-content-center">
+    <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+        <div class="text-center mb-5">
+            <div class="text-900 text-3xl font-medium mb-3">Créer un compte</div>
+        </div>
+        <div>
+            <form [formGroup]="registerForm" (ngSubmit)="createUser()">
+                <!-- Nom -->
+                <div>
+                    <label for="lastName" class="block text-900 font-medium mb-2">Nom</label>
+                    <span class="text-primary"
+                        *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.errors?.['required']">Champs
+                        requis</span>
+                    <input id="lastName" type="text" pInputText class="w-full mb-3" formControlName="lastName">
+                </div>
+
+                <!-- Prénom -->
+                <div>
+                    <label for="firstName" class="block text-900 font-medium mb-2">Prénom</label>
+                    <span class="text-primary"
+                        *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.errors?.['required']">Champs
+                        requis</span>
+                    <input id="firstName" type="text" pInputText class="w-full mb-3" formControlName="firstName">
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-900 font-medium mb-2">Email</label>
+                    <span class="text-primary"
+                        *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['required']">Champs
+                        requis</span>
+                    <span class="text-primary"
+                        *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['pattern']">format
+                        email incorrect</span>
+                    <input id="email" type="text" pInputText class="w-full mb-3" formControlName="email">
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label for="password" class="block text-900 font-medium mb-2">Password</label>
+                    <span class="text-primary"
+                        *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['required']">Champs
+                        requis</span>
+                    <span class="text-primary"
+                        *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['pattern']">mot
+                        de passe pas assez complexe</span>
+                    <input id="password" type="password" pInputText class="w-full mb-3" formControlName="password">
+                </div>
+
+                <!-- Role -->
+                <div class="pb-4 w-full">
+                    <label for="role" class="block text-900 font-medium mb-2">Rôle</label>
+                    <p-dropdown id="role" [options]="dropdownItems" class="w-full" optionLabel="role" optionValue="role"
+                        formControlName="role"></p-dropdown>
+                </div>
+
+                <!-- Valider -->
+                <div>
+                    <button pButton pRipple label="Inscription" icon="pi pi-user" class="w-full"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

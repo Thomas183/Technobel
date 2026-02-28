@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./quiz.css">
+    <link rel="shortcut icon" href="../../assets/img/misc/logo.png" type="image/x-icon">
+</head>
+<body>
+<header id="header">
+    <script>$("#header").load("../navbar/navbar.html");</script>
+</header>
+<main>
+    <div id="mainMenu">
+        <p>Bienvenue sur le Quiz !</p>
+        <button onclick="startQuiz()">Commencer</button>
+    </div>
+    <section id="game">
+        <div id="progressBar"></div>
+        <p id="question">La question est posée ici</p>
+        <div id="answers">
+            <button onclick="userGuess(0)">Guess 1</button>
+            <button onclick="userGuess(1)">Guess 2</button>
+            <button onclick="userGuess(2)">Guess 3</button>
+            <button onclick="userGuess(3)">Guess 4</button>
+        </div>
+        <p id="score">Bonnes réponses :</p>
+    </section>
+</main>
+</body>
+<script src="quiz.js"></script>
+</html>

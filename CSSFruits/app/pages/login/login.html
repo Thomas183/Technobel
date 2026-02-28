@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Connexion</title>
+    <link rel="shortcut icon" href="../../assets/img/misc/logo.png" type="image/x-icon">
+</head>
+<body>
+<header id="header">
+    <script>$("#header").load("../navbar/navbar.html");</script>
+</header>
+<main>
+    <div id="formContainer">
+        <form name="connexion">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email"/>
+            <br/>
+            <label for="pseudonyme">Pseudo</label>
+            <input type="text" name="pseudonyme" id="pseudonyme"/>
+            <br/>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password"/>
+            <div id="submit-container">
+                <button type="button" class="submit" onclick="registerUser()">Inscription</button>
+                <button type="button" class="submit" onclick="logIn()">Connexion</button>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+<script src="../navbar/navbar.js"></script>
+<script src="login.js"></script>
+</html>

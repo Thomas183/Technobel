@@ -1,0 +1,46 @@
+#card {
+    background-color: #ffffff;
+    padding: 5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03), 0 0 2px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin: auto;
+    width: 83.3333%;
+    @media screen and (max-width: 576px)  {
+        width: 100%;
+        padding: 1rem
+    }
+}
+
+#FormTextInputsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    div{
+        margin-bottom: 10px;
+        align-self: center
+    }
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 2rem
+}
+
+h1{
+    text-align: center;
+}
+
+p-listbox{
+    @media screen and (max-width: 576px)  {
+        width: 100%
+    }
+}
+
+
+
+
+

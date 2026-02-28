@@ -1,0 +1,44 @@
+html {
+  scrollbar-face-color: #1c1c1c;
+  scrollbar-base-color: #1c1c1c;
+  scrollbar-3dlight-color: #1c1c1c;
+  scrollbar-highlight-color: #1c1c1c;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1c1c1c;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #121212;
+  color: #5ABDDB;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,83 @@
+#navbar {
+  width: 100%;
+  height: 54px;
+  margin: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+}
+#navbar #cartAmount {
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+  background-color: #5ABDDB;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  margin: 0;
+  position: relative;
+  padding: 8px;
+  left: 15px;
+}
+#navbar #cartAmount:hover {
+  transition: background-color 0.3s ease-in-out;
+  background-color: #2a9cbe;
+}
+#navbar #links {
+  flex-grow: 1;
+  margin-left: 5vw;
+}
+#navbar #links a {
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+  background-color: #5ABDDB;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+#navbar #links a:hover {
+  transition: background-color 0.3s ease-in-out;
+  background-color: #2a9cbe;
+}
+#navbar #links a:hover {
+  background-color: #2a9cbe;
+  transition: 0.3s ease;
+}
+#navbar img {
+  width: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#navbar button {
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+  background-color: #5ABDDB;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+#navbar button:hover {
+  transition: background-color 0.3s ease-in-out;
+  background-color: #2a9cbe;
+}
+#navbar button:hover {
+  background-color: #2a9cbe;
+  transition: 0.3s ease-out;
+}
+#navbar button:active {
+  transform: translateY(0.4px);
+}
+
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 40vh;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+form p-button {
+  padding-top: 10px;
+}
+
+.p-inputgroup {
+  display: flex;
+  width: 100%;
+}
+.p-inputgroup #description {
+  padding-bottom: 60px;
+}
+
+p-password {
+  width: 100%;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 5px;
+}
+
+p-calendar {
+  width: 15vh;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=register.component.css.map */

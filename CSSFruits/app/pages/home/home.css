@@ -1,0 +1,52 @@
+#navbar {
+  position: fixed;
+}
+
+h1 {
+  margin-bottom: 15vh;
+  text-align: center;
+  font-size: 9rem;
+}
+
+.card {
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
+  background-color: #1c1c1c;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  border-radius: 5px;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 20px;
+  text-align: justify;
+  line-height: 38px;
+  overflow: hidden;
+}
+
+.card h2 {
+  font-size: 2rem;
+}
+
+.card p {
+  font-size: 1.8rem;
+}
+
+#panier-fruit-legume {
+  display: block;
+  margin: auto auto 13vh;
+}
+
+#down-arrow {
+  display: block;
+  margin: auto auto 100px;
+}
+
+/*# sourceMappingURL=home.css.map */

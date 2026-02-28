@@ -1,0 +1,22 @@
+<div id="chartForm">
+    <p-dropdown
+        placeholder="Données"
+        [options]="fields"
+        optionLabel="dimFieldName"
+        (onChange)="handleDropDownChangeEvent(false, $event)"
+    >
+    </p-dropdown>
+    <p-dropdown
+        *ngIf="selectedChartType.type !== 'PIE'"
+        placeholder="Champs"
+        [options]="fields"
+        optionLabel="dimFieldName"
+        (onChange)="handleDropDownChangeEvent(true, $event)"
+    >
+    </p-dropdown>
+    <p-dropdown [options]="chartTypes" optionLabel="nom" [(ngModel)]="selectedChartType"></p-dropdown>
+    <p-button (onClick)="createChart()" label="Créer"></p-button>
+    <button pButton (click)="deleteChart(displayedChart.viewId)" *ngIf="displayedChart" label="Supprimer cette vue" class="p-button-danger"></button>
+</div>
+
+<app-display-views></app-display-views>

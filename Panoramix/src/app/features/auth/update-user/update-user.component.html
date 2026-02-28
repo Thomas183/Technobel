@@ -1,0 +1,45 @@
+<div class="w-full h-full flex align-items-center justify-content-center">
+    <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+        <div class="text-center mb-5">
+            <div class="text-900 text-3xl font-medium mb-3">Modifier un compte</div>
+        </div>
+        <div>
+            <form [formGroup]="userForm" (ngSubmit)="updateUser()">
+                <div>
+                    <label for="lastName" class="block text-900 font-medium mb-2">Nom</label>
+                    <span class="text-primary"
+                          *ngIf="userForm.get('lastName')?.touched && userForm.get('lastName')?.errors?.['required']">Champs
+                        requis</span>
+                    <input id="lastName" type="text" pInputText class="w-full mb-3" formControlName="lastName">
+                </div>
+
+                <div>
+                    <label for="firstName" class="block text-900 font-medium mb-2">Prénom</label>
+                    <span class="text-primary"
+                          *ngIf="userForm.get('firstName')?.touched && userForm.get('firstName')?.errors?.['required']">Champs
+                        requis</span>
+                    <input id="firstName" type="text" pInputText class="w-full mb-3" formControlName="firstName">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-900 font-medium mb-2">Email</label>
+                    <span class="text-primary"
+                          *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['required']">Champs requis</span>
+                    <span class="text-primary"
+                          *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['pattern']">format email incorrect</span>
+                    <input id="email" type="text" pInputText class="w-full mb-3" formControlName="email">
+
+                </div>
+
+                <div class="pb-4">
+                    <label for="role" class="block text-900 font-medium mb-2">Rôle</label>
+                    <p-dropdown id="role" [options]="dropdownItems" optionLabel="role" optionValue="role"
+                                formControlName="role"></p-dropdown>
+                </div>
+                <div>
+                    <button pButton pRipple label="Mise à jour" icon="pi pi-user" class="w-full"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

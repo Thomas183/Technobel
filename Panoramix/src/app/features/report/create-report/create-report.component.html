@@ -1,0 +1,43 @@
+<p-toast></p-toast>
+<h1>Nouveau Rapport</h1>
+<div id="card">
+    <form [formGroup]="registerForm" (ngSubmit)="createReport()">
+        <div id="FormTextInputsContainer">
+                <div class="textInput">
+                    <label for="name" class="block text-900 font-medium mb-2">Nom du rapport</label>
+                    <input class="p-inputtext-lg" id="name" type="text" formControlName="name" pInputText>
+                </div>
+                <div class="textInput">
+                    <label for="description" class="block text-900 font-medium mb-2">Description</label>
+                    <textarea
+                        id="description"
+                        formControlName="description"
+                        rows="5"
+                        cols="30"
+                        pInputTextarea
+                        [autoResize]="true">
+                        </textarea>
+                </div>
+            </div>
+                <h5>Sélection des fichiers</h5>
+                <div>
+                    <p-listbox
+                        formControlName="csv"
+                        id="csv"
+                        [options]="tableList"
+                        optionLabel="table"
+                        [filter]="true"
+                        [multiple]="true"
+                        [checkbox]="true"
+                        [showToggleAll]="false"
+                        [metaKeySelection]="false"
+                        (onChange)="onChange($event)"
+                        [listStyle]="{ 'max-height': '500px' }"
+                    ></p-listbox>
+                </div>
+        <div id="buttons">
+            <p-button class="btn" routerLink="">Retour</p-button>
+            <p-button class="btn" type="submit">Continuer</p-button>
+        </div>
+    </form>
+</div>

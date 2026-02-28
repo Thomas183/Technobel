@@ -1,0 +1,17 @@
+#activityDetailMainContainer {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 5vh;
+  padding-top: 50px;
+}
+#activityDetailMainContainer p-card {
+  width: 50vh;
+}
+#activityDetailMainContainer #buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=event-details.component.css.map */

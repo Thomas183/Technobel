@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="./products.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../../assets/img/misc/logo.png" type="image/x-icon">
+</head>
+<body>
+<header id="header"></header>
+<main>
+    <div id="mainContainer">
+        <label for="searchbar"></label>
+        <input type="text" id="searchbar" placeholder="Rechercher">
+        <div id="product-container"></div>
+    </div>
+    <table id="cart">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+</main>
+<footer>
+
+</footer>
+<script src="products.js"></script>
+<script>
+    $("#header").load("../navbar/navbar.html");
+</script>
+</body>
+</html>

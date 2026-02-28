@@ -1,0 +1,100 @@
+@import "../../variables"
+
+@keyframes addToCart
+  0%
+    transform: scale(2)
+  100%
+    transform: scale(1)
+.cartIconAnimation
+    animation: addToCart 0.3s ease-in-out
+
+#navbar
+  position: fixed
+
+main
+  display: flex
+  width: 100%
+  flex-direction: row-reverse
+  justify-content: center
+
+#mainContainer
+  width: 45%
+  margin-top: 100px
+  align-self: center
+  display: flex
+  flex-direction: column
+
+#product-container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  gap: 50px
+  .product
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    background-color: #1c1c1c
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1)
+    width: 250px
+    height: 400px
+  .gap-product
+    width: 250px
+    height: 400px
+  img
+    align-self: center
+    margin: 10px
+    width: 200px
+    height: 200px
+  p
+    font-size: x-large
+    align-self: center
+    color: chartreuse
+  button
+    border-radius: 2px
+    padding: 5px
+    background-color: $accent
+    color: #ffffff
+    text-transform: uppercase
+    letter-spacing: 1px
+    border: none
+    margin: 20px
+  button:hover
+    background-color: #2a9cbe
+    transition: 0.3s ease-out
+
+#searchbar
+  box-shadow: $surface-elevation
+  border-radius: 2px
+  padding: 10px 20px
+  background-color: $secondary-color
+  width: 10vw
+  color: #ffffff
+  font-weight: bold
+  border: none
+  margin-bottom: 20px
+
+#cart
+  background-color: $secondary-color
+  font-weight: bolder
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1)
+  height: fit-content
+  position: fixed
+  width: 400px
+  top: 155px
+  right: 20px
+  th
+    padding-bottom: 10px
+  td, tr
+    text-align: left
+    padding-right: 50px
+    padding-bottom: 10px
+  button
+    border: none
+    font: inherit
+    cursor: pointer
+    outline: inherit
+    background-color: $accent
+    color: black
+    border-radius: 10px
+
+

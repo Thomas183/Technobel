@@ -1,0 +1,21 @@
+<h3>Liste des rapports</h3>
+<p-table [value]="reportList" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nom du rapport</th>
+            <th>Description</th>
+            <th>Date de création</th>
+            <th>Accéder</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-report>
+        <tr>
+            <td>{{ report.name }}</td>
+            <td>{{ report.description }}</td>
+            <td>{{ report.log.createdAt | date}}</td>
+            <td>
+                <p-button (onClick)="viewReport(report.id)" icon="pi pi-eye"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

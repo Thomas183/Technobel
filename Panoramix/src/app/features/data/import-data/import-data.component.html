@@ -1,0 +1,34 @@
+<h1 class="text-center">Importer des CSV</h1>
+<div class="w-full h-auto flex align-items-center justify-content-center">
+    <p-fileUpload
+        (uploadHandler)="uploadFiles()"
+        (onClear)="clearFiles()"
+        (onSelect)="onSelect($event)"
+        [showCancelButton]="true"
+        [customUpload]="true"
+        [multiple]="false"
+        accept=".csv"
+        class="w-full">
+        <ng-template pTemplate="file">
+
+            <div *ngFor="let file of fileInfoList; index as i">
+                <div id="fileList">
+                    <div>{{i}}</div>
+                    <div>{{file.name}}</div>
+                    <div>{{file.size * 1000}} KB</div>
+                    <div>
+                        <p-button (onClick)="onDelete(i)" icon="pi pi-times"></p-button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+
+        </ng-template>
+
+
+    </p-fileUpload>
+</div>
+
+
+

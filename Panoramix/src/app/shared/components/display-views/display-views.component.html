@@ -1,0 +1,13 @@
+<div id="chartContainer">
+    <p-chart
+        #chart
+        width="100%"
+        height="100%"
+        *ngIf="displayedChart"
+        [responsive]="true"
+        [type]="displayedChart.type.toLowerCase()"
+        [data]="displayedChart"
+    >
+    </p-chart>
+</div>
+<p-paginator #paginator (onPageChange)="onPageChange($event)" [rows]="1" [totalRecords]="chartCount"></p-paginator>

@@ -1,0 +1,115 @@
+@import "../../variables"
+
+@font-face
+  font-family: bangers
+  src: url('../../assets/fonts/Bangers.ttf')
+
+@keyframes wrong
+  0%
+    color: red
+    transform: scale(2)
+  100%
+    color: $accent
+
+@keyframes right
+  0%
+    color: green
+    transform: scale(2)
+  100%
+    color: $accent
+
+.wrong
+  animation: wrong 0.3s ease-in-out
+
+.right
+  animation: right 0.3s ease-in-out
+
+#menu
+  @include menu
+
+  #buttonContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 15%
+
+  button
+    @include menuButton
+
+body
+  background-color: #1f1f1f
+  font-family: bangers, serif
+
+#mainContainer
+  z-index: 1
+  display: flex
+  width: 70%
+  flex-direction: column
+  margin: auto
+  align-items: center
+
+#progressBar
+  border-radius: 5px
+  width: 100%
+  height: 10px
+  background-color: $accent
+
+#multiplier
+  font-family: bangers, sans-serif
+  font-size: xx-large
+
+#fruitsFound
+  display: flex
+  justify-content: center
+  margin-top: 10px
+  margin-bottom: 20px
+  align-self: center
+
+#cardContainer
+  display: grid
+  grid-template-columns: repeat(6, 125px)
+  gap: 30px
+  justify-content: center
+  margin: 40px auto
+
+.card
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  background-color: #1c1c1c
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1)
+  width: 125px
+  height: 180px
+  border: solid 1px
+  transition: transform 0.15s ease-in-out
+
+.card:hover
+  transform: scale(1.04)
+
+@keyframes pop
+  0%
+    opacity: 0
+    transform: scale(0)
+  50%
+    opacity: 0.5
+  100%
+    opacity: 1
+    transform: scale(1)
+
+@keyframes reverse-pop
+  0%
+    opacity: 1
+    transform: scale(1)
+  50%
+    opacity: 0.5
+  100%
+    opacity: 0
+    transform: scale(0)
+
+.pop
+  animation: pop 0.2s ease-in-out
+  opacity: 1
+
+.reverse-pop
+  animation: reverse-pop 0.2s ease-in-out
+  opacity: 0

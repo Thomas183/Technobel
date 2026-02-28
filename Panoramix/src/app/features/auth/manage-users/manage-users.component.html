@@ -1,0 +1,28 @@
+<div class="w-1-2">
+    <h3>Liste des utilisateurs</h3>
+    <p *ngIf="connectedUser">hello {{connectedUser.firstName}}</p>
+
+    <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-users>
+            <tr>
+                <td>{{ users.lastName }}</td>
+                <td>{{ users.firstName }}</td>
+                <td>{{ users.email }}</td>
+                <td>{{ users.role }}</td>
+                <td>
+                    <a [routerLink]="['/auth/updateUser/',users.id]"><i class="pi pi-user-edit"></i></a>
+                    <a (click)="delete(users.id)" class="delete-icon"><i class="pi pi-trash"></i></a>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
