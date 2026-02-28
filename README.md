@@ -42,7 +42,7 @@ It can be accessed at https://pokedex.thomasc.ovh/. I thought about making it pr
 
 ---
 
-### EvenManager
+### EventManager
 
 A more complex Angular project to interact with an API. You could create events, visualize upcoming events, personal events, and more. It featured a functional login with permissions, interceptors, and a bunch of other concepts that we had the opportunity to learn.
 
